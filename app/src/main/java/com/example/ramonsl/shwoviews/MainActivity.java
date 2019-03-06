@@ -6,6 +6,9 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -143,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void radio(){
-
         RadioButton sim= findViewById(R.id.radio_sim);
         RadioButton nao= findViewById(R.id.radio_nao);
           if (sim.isChecked())
@@ -153,9 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(!sim.isChecked() && !nao.isChecked()){
                 Toast.makeText(MainActivity.this, "Decide ai!!!", Toast.LENGTH_SHORT).show(); //no inicio
-
             }
-
     }
       public void addListenerOnRatingBar() {
 
@@ -173,9 +173,46 @@ public class MainActivity extends AppCompatActivity {
 	});
   }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
 
 
 
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
+        if (id == R.id.actionBTC) {
+
+                Toast.makeText(this,"BITCOIN SELECIONADO",Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+        if (id == R.id.actionETH) {
+
+            Toast.makeText(this,"ETHEREUM SELECIONADO",Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+        if (id == R.id.actionXRP) {
+            Toast.makeText(this,"RIPPLE SELECIONADO",Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+        if (id == R.id.actionLTC) {
+            Toast.makeText(this,"LITECOIN SELECIONADO",Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
 }

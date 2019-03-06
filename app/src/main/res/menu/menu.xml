@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="br.com.zapmaycon.dbserver.activities.PlaceDetailActivity">
+
+    <item
+        android:id="@+id/actionBTC"
+        android:icon="@drawable/bitcoin"
+        app:showAsAction="ifRoom"
+        android:title="Bitcoin"/>
+
+    <item
+        android:id="@+id/actionLTC"
+        android:icon="@drawable/litecoin"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom"
+        android:title="Litecoin"/>
+
+
+    <item
+        android:id="@+id/actionXRP"
+         android:icon="@drawable/ripple"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom"
+        android:title="Ripple"
+        />
+
+
+
+    <item
+        android:id="@+id/actionETH"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ethereum"
+        android:title="Ethereum"/>
+</menu>
